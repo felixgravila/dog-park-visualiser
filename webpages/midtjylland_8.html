@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html class="no-js" lang="da-DK">
+<head itemscope itemtype="http://schema.org/WebSite"><script type="96b696836445f819426478fe-text/javascript">if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script type="96b696836445f819426478fe-text/javascript">class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let i;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")&&this._isValidScriptType(i)?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}_isValidScriptType(e){return!e||""===e||"string"==typeof e&&["text/javascript","text/x-javascript","text/ecmascript","text/jscript","application/javascript","application/x-javascript","application/ecmascript","application/jscript","module"].includes(e.toLowerCase())}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript;n||console.error("WPRocket unable to document.write this: "+t);const i=document.createRange(),r=n.parentElement;let a=e.get(n);void 0===a&&(a=n.nextSibling,e.set(n,a));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),r.insertBefore(o,a)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+<meta name="apple-itunes-app" content="app-id=501353605">
+<meta charset="UTF-8">
+
+<!--[if IE ]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<![endif]-->
+<link rel="profile" href="//gmpg.org/xfn/11" />
+<link rel="icon" href="//m3k8z4z5.rocketcdn.me/wp-content/files/favicon.png" type="image/x-icon" />
+
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="https://m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-144x144-1.png">
+
+<link rel="apple-touch-icon-precomposed" href="//m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-152x152-1.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta itemprop="name" content="Hundeskovene.dk" />
+<meta itemprop="url" content="https://www.hundeskovene.dk" />
+<link rel="pingback" href="//www.hundeskovene.dk/xmlrpc.php" />
+
+
+
+
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">document.documentElement.className = document.documentElement.className.replace( /\bno-js\b/,'js' );</script>
+
+<title>Hundeskove i Region Midtjylland | Hundeskovene.dk</title><link rel="stylesheet" data-no-minify="" id="wpr-usedcss-css" href="//m3k8z4z5.rocketcdn.me/wp-content/cache/used-css/1/regioner/region-midtjylland/page/8/used.min.css?ver=1635860559">
+<link rel="canonical" href="//www.hundeskovene.dk/regioner/region-midtjylland/" />
+<link rel="prev" href="//www.hundeskovene.dk/regioner/region-midtjylland/page/7/" />
+<link rel="next" href="//www.hundeskovene.dk/regioner/region-midtjylland/page/9/" />
+<meta property="og:locale" content="da_DK" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hundeskove i Region Midtjylland | Hundeskovene.dk" />
+<meta property="og:url" content="https://www.hundeskovene.dk/regioner/region-midtjylland/" />
+<meta property="og:site_name" content="Hundeskovene.dk" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.hundeskovene.dk/#organization","name":"Hundeskove","url":"https://www.hundeskovene.dk/","sameAs":["https://www.facebook.com/hundeskove"],"logo":{"@type":"ImageObject","@id":"https://www.hundeskovene.dk/#logo","inLanguage":"da-DK","url":"https://i2.wp.com/www.hundeskovene.dk/wp-content/uploads/hundeskove-logo-152x152-1.png?fit=152%2C152&ssl=1","contentUrl":"https://i2.wp.com/www.hundeskovene.dk/wp-content/uploads/hundeskove-logo-152x152-1.png?fit=152%2C152&ssl=1","width":152,"height":152,"caption":"Hundeskove"},"image":{"@id":"https://www.hundeskovene.dk/#logo"}},{"@type":"WebSite","@id":"https://www.hundeskovene.dk/#website","url":"https://www.hundeskovene.dk/","name":"Hundeskovene.dk","description":"St\u00f8rste oversigt over steder, hvor du kan lufte din hund uden snor i Danmark","publisher":{"@id":"https://www.hundeskovene.dk/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.hundeskovene.dk/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"da-DK"},{"@type":"CollectionPage","@id":"https://www.hundeskovene.dk/regioner/region-midtjylland/#webpage","url":"https://www.hundeskovene.dk/regioner/region-midtjylland/","name":"Hundeskove i Region Midtjylland | Hundeskovene.dk","isPartOf":{"@id":"https://www.hundeskovene.dk/#website"},"breadcrumb":{"@id":"https://www.hundeskovene.dk/regioner/region-midtjylland/#breadcrumb"},"inLanguage":"da-DK","potentialAction":[{"@type":"ReadAction","target":["https://www.hundeskovene.dk/regioner/region-midtjylland/"]}]},{"@type":"BreadcrumbList","@id":"https://www.hundeskovene.dk/regioner/region-midtjylland/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.hundeskovene.dk/"},{"@type":"ListItem","position":2,"name":"Parks","item":"https://www.hundeskovene.dk/hundeskove/"},{"@type":"ListItem","position":3,"name":"Region Midtjylland"}]}]}</script>
+
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//mapbox.com' />
+<link rel='dns-prefetch' href='//api.mapbox.com' />
+<link rel='dns-prefetch' href='//api.tiles.mapbox.com' />
+<link rel='dns-prefetch' href='//m3k8z4z5.rocketcdn.me' />
+<link href='//fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='//m3k8z4z5.rocketcdn.me' rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Hundeskovene.dk &raquo; Feed" href="//www.hundeskovene.dk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Hundeskovene.dk &raquo;-kommentar-feed" href="//www.hundeskovene.dk/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Hundeskovene.dk &raquo; Region Midtjylland Region Feed" href="//www.hundeskovene.dk/regioner/region-midtjylland/feed/" />
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/plugins/jquery-lightbox-for-native-galleries/colorbox/jquery.colorbox-min.js' id='colorbox-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/ct-ultimate-gdpr/assets/js/service-facebook-pixel.js?ver=1631729444' id='ct_ultimate_gdpr_service_facebook_pixel-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/7UGC/public/fileuploader.js?ver=1631729444' id='ugc-upload-core-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/7UGC/public/fileuploader-init.js?ver=1631729444' id='ugc-upload-init-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//maps.googleapis.com/maps/api/js?key=AIzaSyABW2W3FDEVAUXFEWBzoVsAbDWTIV8c8Y0&#038;ver=5.8' id='ugc-google-api-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" id='customscript-js-extra'>
+/* <![CDATA[ */
+var mts_customscript = {"responsive":"1","nav_menu":"secondary","lazy_load":"1","lazy_load_comments":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' async="async" src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/themes/mts_schema/js/customscript.js?ver=1631729444' id='customscript-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" id='mts_ajax-js-extra'>
+/* <![CDATA[ */
+var mts_ajax_search = {"url":"https:\/\/www.hundeskovene.dk\/wp-admin\/admin-ajax.php","ajax_search":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' async="async" src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/themes/mts_schema/js/ajax.js?ver=1631729444' id='mts_ajax-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" id='ct-ultimate-gdpr-cookie-list-js-extra'>
+/* <![CDATA[ */
+var ct_ultimate_gdpr_cookie_list = {"list":[{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"PHPSESSID","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_logged_in_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""},{"cookie_name":"wordpress_sec_efa9c2ee655199cbd59ac9dc05e68f0c","cookie_type_label":"","first_or_third_party":"Tredje part","can_be_blocked":"1","session_or_persistent":"Session","expiry_time":"","purpose":""}]};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/ct-ultimate-gdpr/assets/js/cookie-list.js?ver=1631729444' id='ct-ultimate-gdpr-cookie-list-js'></script>
+<link rel="https://api.w.org/" href="//www.hundeskovene.dk/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.hundeskovene.dk/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//m3k8z4z5.rocketcdn.me/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.8" />
+
+
+
+
+
+
+<style id="" media="all">@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVs9pbCIPrQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/robotoslab/v16/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+}
+</style>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
+		});
+		$("a.lightbox").colorbox({maxWidth:"95%", maxHeight:"95%"});
+	});
+// ]]>
+</script>
+<meta name="google" content="notranslate">
+<link rel="icon" href="//m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-152x152-1-150x150.png" sizes="32x32" />
+<link rel="icon" href="//m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-152x152-1-600x600.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="//m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-152x152-1-600x600.png" />
+<meta name="msapplication-TileImage" content="https://m3k8z4z5.rocketcdn.me/wp-content/files/hundeskove-logo-152x152-1-600x600.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript> <script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/7UGC/public/php_serializer.js?ver=1631729444"></script>
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/themes/mts_schema-child/js/mobilemodal.js?ver=1631729444"></script>
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/jquery-1.12.4.js?ver=1631729228"></script>
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/ui/1.12.1/jquery-ui.js?ver=1631729229"></script>
+
+
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/mapbox-gl-js/v1.11.0/mapbox-gl.js?ver=1631729231"></script>
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/mapbox.js/plugins/turf/v3.0.11/turf.min.js?ver=1631729233"></script>
+<script type="rocketlazyloadscript" data-minify="1" src="//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js?ver=1631729233"></script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Executive Anvil",
+    "image": [
+      "https://example.com/photos/1x1/photo.jpg",
+      "https://example.com/photos/4x3/photo.jpg",
+      "https://example.com/photos/16x9/photo.jpg"
+     ],
+    "brand": {
+      "@type": "Thing",
+      "name": "ACME"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "ratingCount": "89"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "119.99",
+      "highPrice": "199.99",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+ <script type="rocketlazyloadscript" src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/dist/js/lightbox-plus-jquery.min.js"></script>
+
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BJZ5Q4');</script>
+
+</head>
+<body id="blog" class="archive paged tax-region term-region-midtjylland term-565 wp-custom-logo wp-embed-responsive paged-8 main sfwppa-navi-style sfwppa-style-2" itemscope itemtype="http://schema.org/WebPage">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v10.0&appId=156498834422556&autoLogAppEvents=1" nonce="Kn2si29s" type="96b696836445f819426478fe-text/javascript"></script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BJZ5Q4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="main-container">
+<header id="site-header" class="main-header regular_header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+<div id="regular-header">
+<div class="container">
+
+<div class="logo-wrap">
+<h2 id="logo" class="text-logo" itemprop="headline">
+<a href="https://www.hundeskovene.dk">Hundeskovene.dk</a><br />
+<p><small>Største oversigt over steder, hvor du kan lufte din hund uden snor i Danmark</small></p>
+</h2>
+</div>
+</div>
+</div>
+<div class="clear" id="catcher"></div>
+<div id="header" class="sticky-navigation">
+<div class="container">
+<div id="secondary-navigation" class="secondary-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<a href="#" id="pull" class="toggle-mobile-menu">Menu</a>
+<nav class="navigation clearfix mobile-menu-wrapper">
+<ul id="menu-main-menu-2" class="menu clearfix"><li id="menu-item-20413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-20413"><a href="https://www.hundeskovene.dk/">Home</a></li>
+<li id="menu-item-21778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21778"><a href="/hundeskove">Hundeskove</a>
+<ul class="sub-menu">
+<li id="menu-item-20397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20397"><a href="https://www.hundeskovene.dk/regioner/">Regioner</a>
+<ul class="sub-menu">
+<li id="menu-item-20414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20414"><a href="https://www.hundeskovene.dk/regioner/region-hovedstaden/">Region Hovedstaden</a></li>
+<li id="menu-item-20415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20415"><a href="https://www.hundeskovene.dk/regioner/region-midtjylland/">Region Midtjylland</a></li>
+<li id="menu-item-20416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20416"><a href="https://www.hundeskovene.dk/regioner/region-nordjylland/">Region Nordjylland</a></li>
+<li id="menu-item-20417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20417"><a href="https://www.hundeskovene.dk/regioner/region-sjaelland/">Region Sjælland</a></li>
+<li id="menu-item-20418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20418"><a href="https://www.hundeskovene.dk/regioner/region-syddanmark/">Region Syddanmark</a></li>
+</ul>
+</li>
+<li id="menu-item-21670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21670"><a href="https://www.hundeskovene.dk/kommuner/">Kommuner</a></li>
+<li id="menu-item-20398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20398"><a href="https://www.hundeskovene.dk/byer/">Byer</a></li>
+</ul>
+</li>
+<li id="menu-item-20404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20404"><a href="https://www.hundeskovene.dk/tilfoj-ny/" style="color: #ffffff;"><i class="fa fa-tree"></i> Tilføj hundeskov</a></li>
+<li id="menu-item-21671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21671"><a href="https://www.hundeskovene.dk/app/" style="color: #dd9933;"><i class="fa fa-mobile-phone"></i> App</a></li>
+<li id="menu-item-21947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21947"><a href="https://www.hundeskovene.dk/stoet-os/"><i class="fa fa-money"></i> Støt os</a></li>
+<li id="menu-item-21779" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-21779"><a href="https://www.hundeskovene.dk/blog/">Blog</a></li>
+<li id="menu-item-20396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20396"><a href="https://www.hundeskovene.dk/kontakt/">Kontakt</a></li>
+<li class="menu-header-search">
+<form method="get" id="searchform" class="search-form" action="//www.hundeskovene.dk" _lpchecked="1">
+<fieldset>
+<input type="text" name="s" id="s" value="" placeholder="Search the site" autocomplete="off" />
+<button id="search-image" class="sbutton" type="submit" value="Search">Search</button>
+</fieldset>
+</form>
+</li></ul> </nav>
+</div>
+</div>
+
+</div>
+</header>
+<div id="page" class="">
+<div class="article">
+
+<div id="content_box">
+<div>
+<a href="https://www.hundeskovene.dk">Home </a><i class='fa fa-caret-right'></i> <a href="https:www.hundeskovene.dk/regioner">Regioner </a><i class='fa fa-caret-right'></i> Region-midtjylland </div>
+
+<div style="margin-top:5px; margin-bottom:10px;">
+<h1>Hundeskove i Region Midtjylland</h1>
+<div style="clear: both;">
+</div>
+<div class="rightmap">
+<div id="map" style="width:100%; height:100%;">
+<div id="menu">
+<a id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">streets</a>
+<a id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">outdoors</a>
+<a id="satellite-v9" type="radio" name="rtoggle" value="satellite">satellite</a>
+</div>
+</div>
+<div style="clear: both;"></div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+            var markers = [];
+            // var map;
+            mapboxgl.accessToken =
+              'pk.eyJ1IjoidG9yYmVuZ3J1ZSIsImEiOiJja2F0YTN3cHIwcmk5MzFvY2Z5MzJ6bnEyIn0.DX8WqqRQiCZs8vRSlVbAnQ';
+            var geojson = {
+              'type': 'FeatureCollection',
+              'features': [
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Isenvad vest</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.1973371, 56.1047153]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kolind Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.5687934, 56.3482369]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hammel hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.8710718, 56.2421846]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Dollerup Bakker &#8211; Inderø Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3380068, 56.3781495]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Moesgård Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2475594, 56.0889974]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven i Tarm</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.5370177, 55.9018352]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hastrup Plantage hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2041550, 55.9419130]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Lundhede hundeskov &#8211; Sønderskoven</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9686107, 56.3336104]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skærum Mølle (Vemb Hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.3476864, 56.3305918]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Haunstrup Brunkulslejer (Hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.8389330, 56.1089160]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Åbo Skov (hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0174325, 56.1265971]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skive Plantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0085402, 56.5343540]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Feldborg Nørreskov Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9684397, 56.3736433]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Gammel Ry Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.6938106, 56.0641178]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Gjern Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.7204524, 56.2126424]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>hundeløbegårde Hesselager</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0987384, 56.1269640]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Årslev Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0802972, 56.1513043]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven i Boller Overskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.8713404, 55.8307268]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Grenaa Hundeskove</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.8549208, 56.4105497]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sinding Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.8479117, 56.2134291]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Fjellerup Østergård hundelegeplads</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.5990379, 56.5044896]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Ry Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.7844291, 56.0974353]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Ulvedal Plantage &#8211; Alheden Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2610673, 56.3079338]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skødstrup Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.3122266, 56.2596813]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Brædstrup Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.6261449, 55.9732448]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Spørring Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1397390, 56.3000720]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Lysbro Skov ved Langsø</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.518234, 56.159516]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vejlbo Mose og Arboteret</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5542774, 56.1570395]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Arboretet ved Ferskvandscenteret</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5644184, 56.1528915]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundepark ved Gl stationsvej</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0396051, 56.4539146]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bjerre Brunkulsleje</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.1044194, 56.0124572]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Femhøjsande Plantage &#8211; Ringkøbing Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.3088523, 56.0875491]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Tørring Hundemark</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4919519, 55.8567927]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>True Skov &#8211; Blankhøj</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0679317, 56.1750349]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kompedal Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2903396, 56.2284796]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Grund Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.7550445, 55.6924771]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kobskov ved Almindsø</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5438590, 56.1522270]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Undallslund hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3858128, 56.4778118]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hærvejen Syd hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0045321, 56.0967307]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven i Oust Mølle Folkeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9841892, 56.4726351]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Arnborg Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9869293, 56.0150566]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vinderup Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.7972151, 56.4767908]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bruushåb Skovene</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4475342, 56.4262024]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kærskoven – Ølstedskoven</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.7832564, 55.8145716]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sjørup Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0881555, 56.4223550]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Højvangens Hundelegeplads</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.949634800000002, 56.0483566]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>True Skov, Skjoldhøjvej</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1002381, 56.1706247]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skjern Hundeeng</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.5046492, 55.9316014]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Øster Tørslev Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1779011, 56.5873849]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kølkær Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0892103, 56.0583008]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bording Hundeskove</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2577343, 56.1448892]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kobskov ved Lyngsø</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5427525, 56.1572445]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skelhøj Plantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.1891785, 56.1201613]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven i Hampen By</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3590955, 56.0202809]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Tønballe Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0428245, 55.8140599]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kolpendal Vest</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3644220, 56.0974226]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Knudmosens Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9617200, 56.1220915]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Gullestrup Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9860666, 56.1721220]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sønderskov Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.8557446, 56.4668324]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Havreballe Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1934590, 56.1366900]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sankt Nicolaus&#8217; Kildepark (Kilden)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2078955, 56.1418260]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundegodset</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1894533, 56.1506655]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Lysbro Skov ved Ørnsø</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5246281, 56.1607179]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Borbjerg Plantage (Tinkerdal Hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.8271718, 56.3959927]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Harrild Hede Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.1686360, 56.0024170]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Langå Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9060033, 56.3959459]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Ellemandsbjerget &#8211; Helgenæs</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.5261611, 56.1182858]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Mollerup Skov (hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2055983, 56.2021855]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>De små fisk / Sejs Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5890479, 56.1468534]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Riis Skov el. Risskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2223830, 56.1721962]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Gjellerup Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0506566, 56.1394025]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bærmoseskov, Trige</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1289341, 56.2500390]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kirkeskoven hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.5031388, 55.9412178]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kjellerup Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4578641, 56.2791601]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Østerby Skov (Hundeskov)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1394810, 56.0826130]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Nibsbjerg Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.5975720, 56.3517770]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bjerregrav Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4990872, 56.5799178]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Helenelyst hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0959489, 56.164064]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vestereng</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1833360, 56.1853350]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bygholm Park</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.8290430, 55.8630520]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Egedal skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.6899820, 56.1859846]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Galten (Klank) Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9335224, 56.1509633]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Mølleskovens hundeområde</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4927790, 56.6095983]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Nordre Fælled</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0277513, 56.4956651]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Stensballegaard Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9323324, 55.8625258]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Klostermarken Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4306083, 56.4431067]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Nordskov Hundeskov Silkeborg</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5856134, 56.1673799]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Fladbro hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9634001, 56.4484897]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hvinningdal Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.4844079, 56.1778618]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Husby Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.1620938, 56.3174965]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Nørlund Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2284671, 56.0558151]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Palmelunden, Gludsted Plantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.2879420, 56.0607681]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vester Husby Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.1825333, 56.2848264]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Nordre Fælled Potely (hvalpe og mindre hunde)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0329759, 56.4907013]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Østre Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.6444929, 56.3595274]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Løvbakkerne Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9555780, 56.1770722]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skanderborg Døjsøvej</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.9057819, 56.0357501]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Lindved Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5916775, 55.7884046]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Tvis Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.6802691, 56.3476785]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Resenbro Krydset</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.6052950, 56.1719936]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Ulfborg Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.3150232, 56.2783119]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kolpendal øst, Gludsted Plantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3683824, 56.0951366]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven i Rotary Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0227460, 56.5782569]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Solbjerg Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0830485, 56.0472727]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskoven Kobbelhøje &#8211; Hornet</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.4964046, 56.4886300]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hampen Sø, Palsgård Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3837412, 56.0217352]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hoverdal Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.4064522, 56.1600677]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Snejbjerg hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.9099971, 56.1269510]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Auning Hundepark</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.3753300, 56.4374498]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Brendstrup Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1582958, 56.1849018]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Lystrup Skov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2333634, 56.2333838]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vildbjerg Lilleskov Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.7490389, 56.1995769]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Klosterheden Hundenskov ved Kobbelhøje</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.35291, 56.4893494]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Odder Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1746995, 55.9736489]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skovholmen Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0581226, 56.4545881]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Ulfborg-Stråsø Plantage Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.4690567, 56.2756252]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Skjoldhøjkilen Hundeskov i Aarhus V</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1343414, 56.1699022]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bjerringbro Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.6623053, 56.3949602]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sebberup Skov &#8211; Løsning Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.7229593, 55.8031974]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Kibæk Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.8356373, 56.0404178]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Vinderup By hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.7695350, 56.4811953]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Fårup Hundepark</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.8516135, 56.5519048]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Tranbjerg Park</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1194860, 56.0924190]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Viborg Hedeplantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3824550, 56.4276960]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hørning Hundeskov (Guddeskoven)</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0240069, 56.0927881]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Bølling Sø (Knudmose) Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.3469451, 56.1873468]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hadbjerg hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.1131913, 56.3317120]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Søværnets Operative Kommando (SOK&#8217;s) hundeskov &#8211; Marselisborg</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.2066452, 56.1241233]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Sunds Hundeskov</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.0268170, 56.2017089]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Romalt Hundepark</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [10.0913642, 56.4479288]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskov i Ølgryde Plantage</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [8.5970058, 56.2824145]
+                      }
+                    },
+                 {
+                      'type': 'Feature',
+                      'properties': {
+                        'message': "<strong>Hundeskov Ans</strong>",
+                        'iconSize': [30, 30]
+                      },
+                      'geometry': {
+                        'type': 'Point',
+                        'coordinates': [9.5892671, 56.3061470]
+                      }
+                    },
+                              ]
+            };
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11',
+              center: [9.5018, 56.2639],
+              zoom: 5
+            });
+            /* Mapbox in local language */
+            map.on('load', function() {
+              /* Mapbox local language */
+              map.setLayoutProperty('country-label', 'text-field', [
+                'format',
+                ['get', 'name'],
+                {
+                  'font-scale': 0.8,
+                  'text-font': [
+                    'literal',
+                    ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']
+                  ]
+                }
+              ]);
+            });
+            /* Mapbox in local language */
+            map.addControl(new mapboxgl.FullscreenControl());
+            map.addControl(new mapboxgl.NavigationControl());
+            /* views*/
+            var layerList = document.getElementById('menu');
+            var inputs = layerList.getElementsByTagName('a');
+
+            function switchLayer(layer) {
+              var layerId = layer.target.id;
+              map.setStyle('mapbox://styles/mapbox/' + layerId);
+            }
+            for (var i = 0; i < inputs.length; i++) {
+              inputs[i].onclick = switchLayer;
+            }
+            var bounds = new mapboxgl.LngLatBounds();
+            // add markers to map
+            geojson.features.forEach(function(feature) {
+              var el = document.createElement('div');
+              el.className = 'marker';
+              el.style.backgroundImage =
+                'url(https://m3k8z4z5.rocketcdn.me/wp-content/plugins/7UGC/public/img/tree.png)';
+              el.style.width = feature.properties.iconSize[0] + 'px';
+              el.style.height = feature.properties.iconSize[1] + 'px';
+              bounds.extend(feature.geometry.coordinates);
+              // add marker to map
+              new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({
+                  closeOnClick: true,
+                  closeButton: true
+                }).setHTML(feature.properties.message))
+                .addTo(map);
+            });
+            map.fitBounds(bounds);
+          </script>
+</div>
+</div>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-9187" class="post-9187 park type-park status-publish has-post-thumbnail hentry community-aarhus-kommune city-hadsten city-hinnerup city-trige region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Spørring Hundeskov" title="Spørring Hundeskov" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/01523692667-150x150.png"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/01523692667-150x150.png" alt="Spørring Hundeskov" title="Spørring Hundeskov" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/sporring-hundeskov/" rel="bookmark" title="Spørring Hundeskov">Spørring Hundeskov</a></h1>
+</div>
+<p class="rc_address">Adresse: Randersvej 591, 8380 Trige</p>
+<p class="rc_gps">
+GPS: 56.3000720,&nbsp;&nbsp;10.1397390 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="9187">
+<ul style="width:125px" title="3.67 / 5">
+
+<li class="rating" style="width:91.666666675px" data-post="9187" data-rating="3.666666667" data-readonly="0">
+<span class="average">
+3.67 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Delvis<br /><a href="/tilfoj-ny/?edit=9187">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/sporring-hundeskov/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-480" class="post-480 park type-park status-publish has-post-thumbnail hentry community-aarhus-kommune city-hasselager city-horning city-malling city-marslet city-solbjerg city-tranbjerg-j region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Solbjerg Hundeskov" title="Solbjerg Hundeskov" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr-259728566-scaled-150x150.jpeg"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr-259728566-scaled-150x150.jpeg" alt="Solbjerg Hundeskov" title="Solbjerg Hundeskov" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/solbjerg-hundeskov/" rel="bookmark" title="Solbjerg Hundeskov">Solbjerg Hundeskov</a></h1>
+</div>
+<p class="rc_address">Adresse: Gammel Horsensvej, 8355 Solbjerg,..</p>
+<p class="rc_gps">
+GPS: 56.0472727,&nbsp;&nbsp;10.0830485 </p>
+<p class="rc_gps">
+Parkering GPS: 56.0463130,&nbsp;&nbsp;10.0826056 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="480">
+<ul style="width:125px" title="4.34 / 5">
+
+<li class="rating" style="width:108.61702128617px" data-post="480" data-rating="4.3446808514468" data-readonly="0">
+<span class="average">
+4.34 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=480">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/solbjerg-hundeskov/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-412" class="post-412 park type-park status-publish hentry community-ikast-brande-kommune city-bording city-ikast region-region-midtjylland">
+<div id="insidepost">
+<div class="leftcontent">
+<a href="/tilfoj-ny/?edit=412"><img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="Placeholder Image" title="Isenvad vest" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" /><noscript><img width="300" height="300" src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" alt="Placeholder Image" title="Isenvad vest" style="height:150px !important;width:150px !important;" /></noscript></a>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/ikast-byskov/" rel="bookmark" title="Isenvad vest">Isenvad vest</a></h1>
+</div>
+<p class="rc_address">Adresse: Isenvadvej 25, 7430 Ikast, Denmar..</p>
+<p class="rc_gps">
+GPS: 56.1047153,&nbsp;&nbsp;9.1973371 </p>
+<p class="rc_gps">
+Parkering GPS: 56.1033824,&nbsp;&nbsp;9.1981861 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="412">
+<ul style="width:125px" title="3.17 / 5">
+
+<li class="rating" style="width:79.166666675px" data-post="412" data-rating="3.166666667" data-readonly="0">
+<span class="average">
+3.17 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=412">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/ikast-byskov/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-5156" class="post-5156 park type-park status-publish hentry community-randers-kommune city-randers-c city-randers-no city-randers-sv city-randers-so region-region-midtjylland">
+<div id="insidepost">
+<div class="leftcontent">
+<a href="/tilfoj-ny/?edit=5156"><img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="Placeholder Image" title="Skovholmen Hundeskov" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" /><noscript><img width="300" height="300" src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" alt="Placeholder Image" title="Skovholmen Hundeskov" style="height:150px !important;width:150px !important;" /></noscript></a>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/skovholmen-hundeskov/" rel="bookmark" title="Skovholmen Hundeskov">Skovholmen Hundeskov</a></h1>
+</div>
+<p class="rc_address">Adresse: Jernholmen 3, 8960 Randers, Denma..</p>
+<p class="rc_gps">
+GPS: 56.4545881,&nbsp;&nbsp;10.0581226 </p>
+<p class="rc_gps">
+Parkering GPS: 56.4583794,&nbsp;&nbsp;10.0572933 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="5156">
+<ul style="width:125px" title="2.25 / 5">
+
+<li class="rating" style="width:56.25px" data-post="5156" data-rating="2.25" data-readonly="0">
+<span class="average">
+2.25 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Nej<br /><a href="/tilfoj-ny/?edit=5156">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/skovholmen-hundeskov/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-5462" class="post-5462 park type-park status-publish has-post-thumbnail hentry community-silkeborg-kommune city-kjellerup city-lemming region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Kjellerup Hundeskov" title="Kjellerup Hundeskov" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr1881894618-scaled-150x150.jpeg"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr1881894618-scaled-150x150.jpeg" alt="Kjellerup Hundeskov" title="Kjellerup Hundeskov" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/kjellerup/" rel="bookmark" title="Kjellerup Hundeskov">Kjellerup Hundeskov</a></h1>
+</div>
+<p class="rc_address">Adresse: Astrupvej, 8620 Kjellerup, Denmar..</p>
+<p class="rc_gps">
+GPS: 56.2791601,&nbsp;&nbsp;9.4578641 </p>
+<p class="rc_gps">
+Parkering GPS: 56.2799256,&nbsp;&nbsp;9.4569998 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="5462">
+<ul style="width:125px" title="3.80 / 5">
+
+<li class="rating" style="width:95.119047609525px" data-post="5462" data-rating="3.804761904381" data-readonly="0">
+<span class="average">
+3.80 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=5462">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/kjellerup/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-470" class="post-470 park type-park status-publish has-post-thumbnail hentry community-aarhus-kommune city-aarhus-c city-aarhus-n city-aarhus-v city-abyhoj city-brabrand city-egaa city-hojbjerg city-lystrup city-risskov city-risskov-o city-tilst city-trige city-viby-j region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Vestereng hundeskov" title="Vestereng" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr55070620-150x150.jpeg"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/tixhr55070620-150x150.jpeg" alt="Vestereng hundeskov" title="Vestereng" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/vestereng/" rel="bookmark" title="Vestereng">Vestereng</a></h1>
+</div>
+<p class="rc_address">Adresse: Vesterengvej 26, 8200 Aarhus N, D..</p>
+<p class="rc_gps">
+GPS: 56.1853350,&nbsp;&nbsp;10.1833360 </p>
+<p class="rc_gps">
+Parkering GPS: 56.1837155,&nbsp;&nbsp;10.1808430 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="470">
+<ul style="width:125px" title="3.76 / 5">
+
+<li class="rating" style="width:94.01785715px" data-post="470" data-rating="3.760714286" data-readonly="0">
+<span class="average">
+3.76 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Nej<br /><a href="/tilfoj-ny/?edit=470">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/vestereng/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-20906" class="post-20906 park type-park status-publish hentry community-silkeborg-kommune city-silkeborg city-them region-region-midtjylland">
+<div id="insidepost">
+<div class="leftcontent">
+<a href="/tilfoj-ny/?edit=20906"><img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="Placeholder Image" title="Lysbro Skov ved Ørnsø" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" /><noscript><img width="300" height="300" src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" alt="Placeholder Image" title="Lysbro Skov ved Ørnsø" style="height:150px !important;width:150px !important;" /></noscript></a>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/lysbro-skov-ved-ornso/" rel="bookmark" title="Lysbro Skov ved Ørnsø">Lysbro Skov ved Ørnsø</a></h1>
+</div>
+<p class="rc_address">Adresse: Ørnsøvej 22, 8600 Silkeborg, Denm..</p>
+<p class="rc_gps">
+GPS: 56.1607179,&nbsp;&nbsp;9.5246281 </p>
+<p class="rc_gps">
+Parkering GPS: 56.1574638,&nbsp;&nbsp;9.5272065 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="20906">
+<ul style="width:125px" title="0.00 / 5">
+
+<li class="rating" style="width:0px" data-post="20906" data-rating="0" data-readonly="0">
+<span class="average">
+0.00 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Nej<br /><a href="/tilfoj-ny/?edit=20906">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/lysbro-skov-ved-ornso/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-435" class="post-435 park type-park status-publish has-post-thumbnail hentry community-skive-kommune city-skive region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Skive Plantage Hundeskov" title="Skive Plantage" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/19a399d0-150x150.png"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/19a399d0-150x150.png" alt="Skive Plantage Hundeskov" title="Skive Plantage" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/skive-plantage/" rel="bookmark" title="Skive Plantage">Skive Plantage</a></h1>
+</div>
+<p class="rc_address">Adresse: Svansøvej 6, 7800 Skive, Denmark..</p>
+<p class="rc_gps">
+GPS: 56.5343540,&nbsp;&nbsp;9.0085402 </p>
+<p class="rc_gps">
+Parkering GPS: 56.5352869,&nbsp;&nbsp;9.0091692 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="435">
+<ul style="width:125px" title="3.83 / 5">
+
+<li class="rating" style="width:95.625px" data-post="435" data-rating="3.825" data-readonly="0">
+<span class="average">
+3.83 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=435">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/skive-plantage/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-5100" class="post-5100 park type-park status-publish has-post-thumbnail hentry community-horsens-kommune city-gedved city-horsens region-region-midtjylland has_thumb">
+<div id="insidepost">
+<div class="leftcontent">
+<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="Bygholm Park Fritløbsområde i Horsens" title="Bygholm Park" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/195d8910-150x150.png"><noscript><img width="150" height="150" src="//m3k8z4z5.rocketcdn.me/wp-content/files/195d8910-150x150.png" alt="Bygholm Park Fritløbsområde i Horsens" title="Bygholm Park" style="height:150px !important;width:150px !important;"></noscript></img>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/bygholm-park/" rel="bookmark" title="Bygholm Park">Bygholm Park</a></h1>
+</div>
+<p class="rc_address">Adresse: Bygholm Parkvej 12, 8700 Horsens..</p>
+<p class="rc_gps">
+GPS: 55.8630520,&nbsp;&nbsp;9.8290430 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="5100">
+<ul style="width:125px" title="2.40 / 5">
+
+<li class="rating" style="width:60.125px" data-post="5100" data-rating="2.405" data-readonly="0">
+<span class="average">
+2.40 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=5100">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/bygholm-park/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+
+<article class="latestPost excerpt article clearfix">
+<div id="post-10051" class="post-10051 park type-park status-publish hentry community-herning-kommune city-ulfborg region-region-midtjylland">
+<div id="insidepost">
+<div class="leftcontent">
+<a href="/tilfoj-ny/?edit=10051"><img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="Placeholder Image" title="Ulfborg-Stråsø Plantage Hundeskov" style="height:150px !important;width:150px !important;" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" /><noscript><img width="300" height="300" src="//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema-child/img/park_placeholder.jpg" alt="Placeholder Image" title="Ulfborg-Stråsø Plantage Hundeskov" style="height:150px !important;width:150px !important;" /></noscript></a>
+</div>
+<div class="rightcontent">
+
+<div class="post-header">
+<h1 class="entry-title"><a href="https://www.hundeskovene.dk/hundeskove/ulfborg-straso-plantage-hundeskov/" rel="bookmark" title="Ulfborg-Stråsø Plantage Hundeskov">Ulfborg-Stråsø Plantage Hundeskov</a></h1>
+</div>
+<p class="rc_address">Adresse: Kratvej, 7500 Holstebro, Denmark..</p>
+<p class="rc_gps">
+GPS: 56.2756252,&nbsp;&nbsp;8.4690567 </p>
+<p class="rc_gps">
+Parkering GPS: 56.2776714,&nbsp;&nbsp;8.4690605 </p>
+<p class="rc_rating">
+<div class="clear" style="width: 325px;display:block; position:relative;">
+<div style="float:left; display: inline-block!important; line-height:25px; ">Giv hundeskoven stjerner:</div>
+<div>
+<div class="ratings " data-post="10051">
+<ul style="width:125px" title="4.25 / 5">
+
+<li class="rating" style="width:106.25px" data-post="10051" data-rating="4.25" data-readonly="0">
+<span class="average">
+4.25 / 5 </span>
+<span class="best">
+5 </span>
+</li>
+<li class="s1">
+<a title="1 ud af 5">1 / 5</a>
+</li>
+<li class="s2">
+<a title="2 ud af 5">2 / 5</a>
+</li>
+<li class="s3">
+<a title="3 ud af 5">3 / 5</a>
+</li>
+<li class="s4">
+<a title="4 ud af 5">4 / 5</a>
+</li>
+<li class="s5">
+<a title="5 ud af 5">5 / 5</a>
+</li>
+</ul>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+</p>
+<p class="rc_gps">Indhegnet:
+Ja<br /><a href="/tilfoj-ny/?edit=10051">Ret oplysninger &raquo;</a><br /> </p> <p><a href="https://www.hundeskovene.dk/hundeskove/ulfborg-straso-plantage-hundeskov/">Læs mere &raquo;</a></p>
+</div>
+</div>
+</div>
+</article>
+
+<div class='wp-pagenavi' role='navigation'>
+<span class='sfwppa-pages'>Side 8 af 14</span><a class="sfwppa-pages sfwppa-first" aria-label="First Page" href="https://www.hundeskovene.dk/regioner/region-midtjylland/">&laquo; Første</a><a class="sfwppa-pages sfwppa-link sfwppa-link-previous" rel="prev" aria-label="Previous Page" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/7/">&laquo;</a><span class='sfwppa-pages sfwppa-extend'>...</span><a class="sfwppa-pages sfwppa-current-page smaller" title="Page 6" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/6/">6</a><a class="sfwppa-pages sfwppa-current-page smaller" title="Page 7" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/7/">7</a><span aria-current='page' class='current'>8</span><a class="sfwppa-pages sfwppa-current-page larger" title="Page 9" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/9/">9</a><a class="sfwppa-pages sfwppa-current-page larger" title="Page 10" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/10/">10</a><span class='sfwppa-pages sfwppa-extend'>...</span><a class="sfwppa-pages sfwppa-link sfwppa-link-next" rel="next" aria-label="Next Page" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/9/">&raquo;</a><a class="sfwppa-pages sfwppa-last" aria-label="Last Page" href="https://www.hundeskovene.dk/regioner/region-midtjylland/page/14/">Sidste &raquo;</a>
+</div></div>
+</div>
+<aside id="sidebar" class="sidebar c-4-12 mts-sidebar-sidebar" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+<div id="text-5" class="widget widget_text"><h3 class="widget-title">Hundeskove på Iphone</h3> <div class="textwidget"><p>Hundeskovene App til iOS (Iphone og Ipad) kan downloades i Apple App store <a href="https://itunes.apple.com/dk/app/hundeskove/id501353605?ls=1&amp;mt=8" target="_blank" rel="noopener">nu</a><br />
+<a href="https://itunes.apple.com/dk/app/hundeskove/id501353605?ls=1&amp;mt=8" target="_blank" rel="noopener"><br />
+<img class="alignnone wp-image-20471 size-medium" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20110'%3E%3C/svg%3E" alt="" width="300" height="110" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/uploads/2020/02/available-on-the-app-store-300x110.png" /><noscript><img class="alignnone wp-image-20471 size-medium" src="//m3k8z4z5.rocketcdn.me/wp-content/uploads/2020/02/available-on-the-app-store-300x110.png" alt="" width="300" height="110" /></noscript></a></p>
+<p>Ved at downloade vores App støtter du det fortsatte arbejde med at udvikle hundeskovene.dk og vores Apps.</p>
+<p><a href="https://apps.apple.com/dk/app/hundeskove-i-danmark-hundeskovene-dk/id501353605?l=da" target="_blank" rel="noopener"><img class="size-medium wp-image-21950 aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20271%20300'%3E%3C/svg%3E" alt="Pris for Hundeskovene App" width="271" height="300" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/pris-hundeskovene-app-271x300.png" /><noscript><img class="size-medium wp-image-21950 aligncenter" src="//m3k8z4z5.rocketcdn.me/wp-content/files/pris-hundeskovene-app-271x300.png" alt="Pris for Hundeskovene App" width="271" height="300" /></noscript></a></p>
+<p>Prisen er kun 45 kr. (det svarer sådan ca. til en to-go-kaffe) og så er du sikret løbende opdateringer af både eksisterende og nye hundeskove.</p>
+<p>Tak for støtten!</p>
+</div>
+</div><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="fb-page" data-href="https://www.facebook.com/hundeskove/" data-tabs="app" data-width="274" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/hundeskove/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hundeskove/">Hundeskovene.dk</a></blockquote></div></div></div><div id="text-9" class="widget widget_text"><h3 class="widget-title">Støt Hundeskovene.dk</h3> <div class="textwidget"><p>Vi forsøger at undgå reklamer på Hundeskovne.dk. Støt os ved at downloade vores <a href="https://www.hundeskovene.dk/app/">App</a> eller støt os ved at overføre 10, 25 eller 50 kr. via Mobilepay</p>
+<p><img class="alignnone size-full wp-image-21944" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%201703'%3E%3C/svg%3E" alt="Støt Hundeskovene.dk via Mobilepay" width="1200" height="1703" data-lazy-src="//m3k8z4z5.rocketcdn.me/wp-content/files/betal-med-mobilepay.png" /><noscript><img class="alignnone size-full wp-image-21944" src="//m3k8z4z5.rocketcdn.me/wp-content/files/betal-med-mobilepay.png" alt="Støt Hundeskovene.dk via Mobilepay" width="1200" height="1703" /></noscript></p>
+<p>Tusind tak for hjælpen!</p>
+</div>
+</div> </aside>
+</div>
+<footer id="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+<div class="footer-widgets first-footer-widgets widgets-num-4">
+<div class="container">
+<div class="f-widget f-widget-1">
+<div id="text-11" class="widget widget_text"><h3 class="widget-title">Kontakt os</h3> <div class="textwidget"><p>Hundeskovene.dk<br />
+v/Ninja Media ApS<br />
+Elsdyrvej 7<br />
+6000 Kolding</p>
+<p>CVR: 36555386</p>
+<p><a href="https://www.hundeskovene.dk/kontakt/">Kontakt os</a></p>
+</div>
+</div> </div>
+<div class="f-widget f-widget-2">
+<div id="text-12" class="widget widget_text"><h3 class="widget-title">Links</h3> <div class="textwidget"><p><a href="https://www.hundeskovene.dk/hundeskove/">Alle Hundeskove</a><br />
+<a href="https://www.hundeskovene.dk/tilfoj-ny/">Tilføj Hundeskov</a><br />
+<a href="https://www.hundeskovene.dk/app/">Hundeskove App</a><br />
+<a href="https://www.hundeskovene.dk/stoet-os/">Støt os</a><br />
+<a href="https://www.hundeskovene.dk/blog/">Blog</a><br />
+<a href="https://www.hundeskovene.dk/om-hundeskovene-dk/">Om Hundeskovene.dk</a><br />
+<a href="https://www.hundeskovene.dk/kontakt/">Kontakt</a></p>
+</div>
+</div> </div>
+<div class="f-widget f-widget-3">
+<div id="custom_html-5" class="widget_text widget widget_custom_html"><h3 class="widget-title">Social</h3><div class="textwidget custom-html-widget"><div class="fb-page" data-href="https://www.facebook.com/hundeskove/" data-tabs="" data-width="230" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/hundeskove/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hundeskove/">Hundeskovene.dk</a></blockquote></div></div></div> </div>
+<div class="f-widget last f-widget-4">
+<div id="single_category_posts_widget-2" class="widget widget_single_category_posts_widget vertical-small"><h3 class="widget-title">Seneste artikler</h3><ul class="category-posts"> <li class="post-box vertical-small no-thumb"> <div class="post-data">
+<div class="post-data-container">
+<div class="post-title">
+<a href="https://www.hundeskovene.dk/blog/hundestrande-danmark/" title="Hundestrande i Danmark">Hundestrande i Danmark</a>
+</div>
+</div>
+</div>
+</li> </ul>
+</div> </div>
+</div>
+</div>
+<div class="copyrights">
+<div class="container">
+
+<div class="row" id="copyright-note">
+<span><a href=" https://www.hundeskovene.dk/" title=" Største oversigt over steder, hvor du kan lufte din hund uden snor i Danmark">Hundeskovene.dk</a> Copyright &copy; 2021.</span>
+<div class="to-top">© 2010 - 2021 Hundeskovene.dk - alle rettigheder forbeholdes.
+&nbsp;</div>
+</div>
+
+</div>
+</div>
+</footer>
+</div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">var e,r;(e=document.createElement("script")).type="text/javascript",e.src="https://script.parametre.online/script.js",e.async=true,(r=document.getElementsByTagName("script")[0]).parentNode.insertBefore(e,r);</script> <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		function genesisBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+<div data-bg="" id="ct-ultimate-gdpr-cookie-popup" class="ct-ultimate-gdpr-cookie-popup-standard-settings ct-ultimate-gdpr-cookie-bottomPanel ct-ultimate-gdpr-cookie-popup-modern ct-ultimate-gdpr-cookie-popup-button-rounded rocket-lazyload" style="background-color: #ff7d27;
+            color: #ffffff;
+    bottom: 0px; width: 100%; border-radius: 0;  background-size:cover; background-position: 100%;">
+<div class='ct-container ct-ultimate-gdpr-cookie-popup-bottomPanel'> <div id="ct-ultimate-gdpr-cookie-content">
+Hunde elsker hundekiks og vi elsker cookies. For at få dette website til at fungere korrekt, placerer vi små datafiler kaldet cookies på din computer eller smartphone. </div>
+<div class='ct-ultimate-gdpr-cookie-buttons ct-clearfix'> <div id="ct-ultimate-gdpr-cookie-accept" style="border-color: #ffffff; background-color: #dd9933; color: #ffffff;">
+<span class='fa fa-check ct-ultimate-gdpr-button-icon-left'></span>OK, så ved jeg det! </div>
+</div>
+<div class="ct-clearfix"></div>
+</div>
+</div><script type="96b696836445f819426478fe-text/javascript" id='ct-ultimate-gdpr-cookie-popup-js-extra'>
+/* <![CDATA[ */
+var ct_ultimate_gdpr_cookie = {"ajaxurl":"https:\/\/www.hundeskovene.dk\/wp-admin\/admin-ajax.php","readurl":"https:\/\/www.hundeskovene.dk\/hundeskove\/lystrup-skov\/","readurl_new_tab":"off","consent":"","reload":"","consent_expire_time":"1669613216","consent_time":"1638077216","consent_default_level":"2","consent_accept_level":"5","age_enabled":"5"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/ct-ultimate-gdpr/assets/js/cookie-popup.js?ver=1631729233' id='ct-ultimate-gdpr-cookie-popup-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/plugins/ct-ultimate-gdpr/assets/js/jquery.base64.min.js' id='ct-ultimate-gdpr-base64-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-includes/js/dist/vendor/regenerator-runtime.min.js' id='regenerator-runtime-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.hundeskovene.dk\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1631729233' id='contact-form-7-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js?ver=1631729233' id='genesis-blocks-dismiss-js-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="96b696836445f819426478fe-text/javascript" id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/google-map-page\/|\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/www.hundeskovene.dk","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' async="async" src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/themes/mts_schema/js/sticky.js?ver=1631729233' id='StickyNav-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' async="async" src='//m3k8z4z5.rocketcdn.me/wp-content/themes/mts_schema/js/layzr.min.js' id='layzr-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" id='post-ratings-js-extra'>
+/* <![CDATA[ */
+var post_ratings = {"ajaxURL":"https:\/\/www.hundeskovene.dk\/wp-admin\/admin-ajax.php","nonce":"8be53d2249","path":"https:\/\/www.hundeskovene.dk\/wp-content\/plugins\/post-ratings\/assets\/images\/","number":"5"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/post-ratings/js/post-ratings.js?ver=1631729233' id='post-ratings-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='//m3k8z4z5.rocketcdn.me/wp-content/cache/min/1/wp-content/plugins/post-ratings/assets/jquery.raty.js?ver=1631729233' id='post-ratings-raty-js'></script>
+<script type="96b696836445f819426478fe-text/javascript" src='//m3k8z4z5.rocketcdn.me/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+
+
+<script type="rocketlazyloadscript">
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+  var vl = getParameterByName('edit');  
+  
+  if(vl !== null){
+    jQuery('.boldgrid-section').hide();
+  }
+</script>
+<script type="96b696836445f819426478fe-text/javascript">window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="//m3k8z4z5.rocketcdn.me/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js" type="96b696836445f819426478fe-text/javascript"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="96b696836445f819426478fe-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b527c90fd3f4dfa","token":"071c44e4dfac44e086def2c77527209f","version":"2021.11.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
